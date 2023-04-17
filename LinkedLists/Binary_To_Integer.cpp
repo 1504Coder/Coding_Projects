@@ -21,7 +21,7 @@ Each node's value is either 0 or 1.
 //Iteratively *Also could've used doubling method*
 int getDecimalValue_iter(Node* head) {
     string binary = "";
-    while(head != nullptr){
+    while(head != nullptr){ 
         binary += to_string(head->val);
         head = head->next;
     }
@@ -43,8 +43,8 @@ return sum;
 
 // Recursively
 int getDecimalValue_recur_Helper(Node* head, int numb){
-if(head->next == nullptr){
-return ((numb*2)+(head->val));
+if(head->next == nullptr){ //Base case executes if the size of the linked list is 1
+return numb*2 + 1;
 }
 else{
 numb = (numb*2)+(head->val);
